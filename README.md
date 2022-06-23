@@ -1,4 +1,4 @@
-# banking-Dataset-Marketing-Targets
+# Banking-Dataset-Marketing-Targets
 This is a personal project. 
 #### -- Project Status: [Active]
 ## Project Intro/Objective
