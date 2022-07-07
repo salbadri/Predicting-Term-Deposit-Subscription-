@@ -2,12 +2,11 @@
 This is a personal project. 
 #### -- Project Status: [Completed]
 ## Project Intro/Objective
-The goal of this project is to find robust model that can predict if the client will subscribe to a term deposit.
-
+In this project I want to find a robust model that can predict if the client will subscribe to a term deposit.
 
 The dataset was retrieved from kaggle (https://www.kaggle.com/datasets/prakharrathi25/banking-dataset-marketing-targets). 
 
-This dataset consists of 45211 records and 17 variables. 
+This dataset consists of 45211 records and 17 variables. Tables below has a description of the variables.
 
 |Variables |Type | Description
 ------- | ------- | ------- 
