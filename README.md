@@ -33,7 +33,7 @@ The dataset obtained from kaggle.It consists of 45211 records and 17 variables. 
 ## Issues with Dataset
 * Imbalanced as it depicted the figure below
 
-![](/Images/Datasetdistribution.png)
+![](banking-Dataset-Marketing-Targets/blob/main/Images/Datasetdistribution.png)
 
 * Missing values: job, education, contact, and poutcome have unknown values. 
 
