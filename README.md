@@ -2,7 +2,7 @@
 This is a personal project. 
 #### -- Project Status: [Completed]
 ## Project Intro/Objective
-In this project I want to find a robust model that can predict if the client will subscribe to a term deposit.
+I aim to find a robust model that can predict if the client will subscribe to a term deposit.
 
 This project has two jupyter notbooks: part 1 and part 2.
 * Part 1: Exploratory Data analysis (EDA): I explored the data and performed the necessary cleaning. 
@@ -31,11 +31,11 @@ The dataset obtained from kaggle.It consists of 45211 records and 17 variables. 
 | Y (target variable |categorical| has the client subscribed a term deposit? ('yes', 'no')
 
 ## Issues with Dataset
-* Imbalanced as it depicted the figure below
+* Imbalanced as it depicted in the figure below
 
-![](banking-Dataset-Marketing-Targets/blob/main/Images/Datasetdistribution.png)
+![github-small](https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/Dist%20of%20the%20target%20variable%20.png)
 
-* Missing values: job, education, contact, and poutcome have unknown values. 
+* Has missing values: job, education, contact, and poutcome have unknown values. 
 
 
 
@@ -49,11 +49,6 @@ The dataset obtained from kaggle.It consists of 45211 records and 17 variables. 
 * Machine Learning
 * Data Visualization
 * Predictive Modeling
-
-
-### Technologies
-
-
 
 ## Project Description
 
