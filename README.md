@@ -4,9 +4,11 @@ This is a personal project.
 ## Project Intro/Objective
 In this project I want to find a robust model that can predict if the client will subscribe to a term deposit.
 
-The dataset was retrieved from kaggle (https://www.kaggle.com/datasets/prakharrathi25/banking-dataset-marketing-targets). 
-
-This dataset consists of 45211 records and 17 variables. Tables below has a description of the variables.
+This project has two jupyter notbooks: part 1 and part 2.
+* Part 1: Exploratory Data analysis (EDA): I explored the data and performed the necessary cleaning. 
+* Part 2: Training Algorithms and then evaluate the models on the validation set; best performance model was evaluated on the test set
+## Description of the Dataset:
+The dataset obtained from kaggle.It consists of 45211 records and 17 variables. Tables below has a description of the variables.
 
 |Variables |Type | Description
 ------- | ------- | ------- 
@@ -28,19 +30,17 @@ This dataset consists of 45211 records and 17 variables. Tables below has a desc
 | poutcome | categorical | outcome of the previous marketing campaign: unknown, failure, other, success
 | Y (target variable |categorical| has the client subscribed a term deposit? ('yes', 'no')
 
+## Issues with Dataset
+* Imbalanced as it depicted the figure below
+![](Images/Dataset distribution.png)
+* Missing values: job, education, contact, and poutcome have unknown values. 
 
 
 
 
 
 
-This project has two jupyter notbooks: part 1 and part 2.
 
-* Part 1: Exploratory Data analysis (EDA): 
-
-** I explored the data and performed the necessary cleaning. 
-
-* Part 2: Training Algorithms and then evaluate the models on the validation set; best performance model was evaluated on the test set
 
 ### Methods Used
 * Inferential Statistics
