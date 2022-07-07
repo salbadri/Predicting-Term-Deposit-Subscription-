@@ -11,11 +11,11 @@ This dataset consists of 45211 records and 17 variables.
 
 |Variables | Description
 ------- | ------- 
-|Age (numeric) | age of the client |
+|Age (numeric) | age of the client 
     
-| Job (categorical) | management, technician, entrepreneur, blue-collar, unknown, retired, admin., services, self-employed, unemployed, housemaid, student|
+| Job (categorical) | management, technician, entrepreneur, blue-collar, unknown, retired, admin., services, self-employed, unemployed, housemaid, student
 
-| marital (categorical)| married, single, divorced|
+| marital (categorical)| married, single, divorced
 
 | education (categorical) | tertiary, secondary, unknown, primary
 
