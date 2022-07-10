@@ -50,7 +50,7 @@ This dataset consists of 45211 records and 17 variables.
 * Correlation between continuous features demonstrated below, pdays and previous are moderately correlated (r=0.45), campaign and day are weakly corelated (r=0.16). 
 ![github-small]( https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/continous-correlation.png)
 * Association btween Categorical features checked using Cramer V
-* ![github-small]( )
+![github-small]( https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/CramerVAssociation.png)
 * I replaced all unknowns in my dataset with ‘nan’ using numpy (np.nan). job has 288 Null values, education has 1857 Null values, contact has 13020 Null values, poutcome has 36959 Null values.
 
 * Before treating missing values, I checked if they are missing at random using msno library. I used matrix and heatmap (see graph below); I concluded that they are missing at random. 
@@ -66,8 +66,8 @@ This dataset consists of 45211 records and 17 variables.
 * Data set was already divided into train set and test set. I, then, partitioned the test set into test and validation. 
 * My dataset is imbalanced. I used TomekLinks(tl), Nearmiss and SMOTE separately. I will check which method will yield best results
 * Based on the EDA, I defined seven set of features:
-	1- Original features: original features (not capped or transformed).
-	2- original reduced: drop feature that I suspect it degrades the performance of my model. dropped pdays and previous as they are correlated. 
+1- Original features: original features (not capped or transformed).
+2- original reduced: drop feature that I suspect it degrades the performance of my model. dropped pdays and previous as they are correlated. 
 3- clean-capped-features: contains capped features in addition to other features that did not require capping.
 4- clean-trans-features: contain features that were transformed. To check if transformation will improve the model performance. 
 5- clean-reduced-trans-features: drop pdays and previous, month (month associated with housing)
@@ -77,35 +77,34 @@ This dataset consists of 45211 records and 17 variables.
 
 ### Part 2: In this part I defined the algorithms that I am interested in. I trained the Algorithms and tuned the models using GridSearch CV. I, then, evaluate the models on the validation set; best performance model was evaluated on the test set
 
-* Algorithms
-1-	Logistic Regression
-2-	Support Vector Machine
-3-	Decision Tree
-4-	Histogram Based Gradient Boosting
-5-	Random Forest
-6-	Voting Classifier: Estimators Logistic Regression, Random Forest, and GaussianNB. Voting is soft
+* Algorithms: 
+1- Logistic Regression
+2- Support Vector Machine
+3- Decision Tree
+4- Histogram Based Gradient Boosting
+5- Random Forest
+6- Voting Classifier: Estimators Logistic Regression, Random Forest, and GaussianNB. Voting is soft
 
-* Tuning using GridSearch CV:
-1-	Algorithms and the set Parameters:
+* Tuning using GridSearch CV (Algorithms and the set Parameters):
 
-I.	Logistic Regression: penalty [l1, l2], tol [0.01, 0.001, 0.0001, 0.00001], max_iter[300, 400, 500, 600, 700, 1000]
+I.Logistic Regression: penalty [l1, l2], tol [0.01, 0.001, 0.0001, 0.00001], max_iter[300, 400, 500, 600, 700, 1000]
 
-II.	Support Vector Machine: tol[0.1,0.01,0.001,0.0001], C [0.1,1,10]
+II.Support Vector Machine: tol[0.1,0.01,0.001,0.0001], C [0.1,1,10]
 
-III.	Decision Tree: max_depth[5,10,15,30,50, None]
+III.Decision Tree: max_depth[5,10,15,30,50, None]
 
 
-IV.	Histogram Based Gradient Boosting: max_iter[100, 250, 500, 700, 1000, 1500], max_depth [1,3,5,7,9], and learning_rate [0.01,0.1,1]
+IV.Histogram Based Gradient Boosting: max_iter[100, 250, 500, 700, 1000, 1500], max_depth [1,3,5,7,9], and learning_rate [0.01,0.1,1]
 
-V.	Random Forest: n_estimators[100, 250, 500], max_depth[7, 10, None], bootstrap[True, False], 
+V.Random Forest: n_estimators[100, 250, 500], max_depth[7, 10, None], bootstrap[True, False], 
 
-VI.	Voting Classifier: lr_C [0.1,1,10], lr_solver[saga], lr_maxiter[100, 200, 400, 500], rf_bootstrap[True, False]
+VI.Voting Classifier: lr_C [0.1,1,10], lr_solver[saga], lr_maxiter[100, 200, 400, 500], rf_bootstrap[True, False]
 
-2-	Scoring Matric: F1, and AUC
-3-	CV: 5
-4-	Verbose:3
-5-	Error_score: Raise 
-6-	Refit: AUC
+* Scoring Matric: F1, and AUC
+* CV: 5
+* Verbose:3
+* Error_score: Raise 
+* Refit: AUC
 
 * Evaluating the Models on the Validation set: all the trained models evaluated on the validation set. Accuracy, Precision, recall, F1 score, ROC AUC, and latency were calculated. Picked the best performance model based on ROC AUC score.  
 Random Forest on the set of capped features achieved the best results. You can view models performance on validation set Here: [ModelsPerformance](https://public.tableau.com/views/Performanceofthemodelsonthevalidationset/Dashboard1?:l..)
@@ -121,7 +120,9 @@ Random Forest on the set of capped features achieved the best results. You can v
 * Conclusion:
 From the results we conclude that capping the features age, balance,duration, campign, pdays, and previous improved the performance of our model. 
 
- 
+## Technologies 
+* Jupyter NoteBook
+* [Tableau](https://public.tableau.com/views/Performanceofthemodelsonthevalidationset/Dashboard1?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link) (For Models Performance Visualization)
 ## Needs of this project
 
 - data exploration/descriptive statistics
