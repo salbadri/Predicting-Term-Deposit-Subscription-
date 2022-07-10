@@ -3,9 +3,10 @@ Personal project.
 #### -- Project Status: [Completed]
 ## Project Intro/Objective
 The goal of this project is to find robust model that can predict if the client will subscribe to a term deposit.
+* There are two jupyter notbooks: part 1(Exploratory Data Analysis) and part 2 (Training, Evaluation, and Testing).
 
 ## Description of the Dataset:
-The dataset was obtained from kaggle (https://www.kaggle.com/datasets/prakharrathi25/banking-dataset-marketing-targets). 
+The dataset was obtained from [kaggle](https://www.kaggle.com/datasets/prakharrathi25/banking-dataset-marketing-targets). 
 This dataset consists of 45211 records and 17 variables.
 
 |Variables |Type | Description
@@ -36,25 +37,20 @@ This dataset consists of 45211 records and 17 variables.
 * Has missing values: job, education, contact, and poutcome have unknown values. 
 
 
-
-
-
- 
- There are two jupyter notbooks: part 1 and part 2.
-
-
 ### Methods Used
 * Inferential Statistics
 * Machine Learning
 * Data Visualization
 * Predictive Modeling
 
-## Project Description
-# Project Description
+## Project Description: 
+
 ### Part 1: Exploratory Data analysis (EDA): 
 * Dataset has a mix of continuous and categorical features. I explored them separately. 
-* I checked Correlation between continuous features as it demonstrated below, pdays and previous are moderately correlated (r=0.45), campaign and day are weakly corelated (r=0.16). 
-![github-small]((https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/continous-correlation.png)
+* Correlation between continuous features demonstrated below, pdays and previous are moderately correlated (r=0.45), campaign and day are weakly corelated (r=0.16). 
+![github-small]( https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/continous-correlation.png)
+* Association btween Categorical features checked using Cramer V
+* ![github-small]( )
 * I replaced all unknowns in my dataset with ‘nan’ using numpy (np.nan). job has 288 Null values, education has 1857 Null values, contact has 13020 Null values, poutcome has 36959 Null values.
 
 * Before treating missing values, I checked if they are missing at random using msno library. I used matrix and heatmap (see graph below); I concluded that they are missing at random. 
@@ -63,9 +59,6 @@ This dataset consists of 45211 records and 17 variables.
 ![github-small]( https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/msnoMatrix.png)
 
 * I dropped the feature Poutcome as it has 39959 missing values. For the rest I dropped every row that has missing values.
-* After cleaning the null values, I noticed: association btw target variable and contact decreased after dropping unknowns, association between month and contact decreased from 0.5 to 0.1, association between contact and job decreased 0.2 to 0.1, association between contact and housing decreased from 0.2 to 0, association between education and job increased from 0.5 to 0.6, and association between loan and contact with martial increased from 0 to 0.1
-
-![github-small](https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/CramerV.png)
 
 * I used Z-score and boxplot to detect outliers. Analysis showed that age, balance, pdays, and previous have outliers.  I clipped at the 99 percentiles. Saved results as capped to see if capping have impact on the performance of our models.
 * I used Box-Cox Transformation. A Box Cox transformation is a transformation of non-normal dependent variables into a normal shape. Normality is an important assumption for many statistical techniques; if your data isn’t normal, applying a Box-Cox means that you are able to run a broader number of tests. I performed transformation on age, pdays, balance, duration, and campaign. 
@@ -115,8 +108,8 @@ VI.	Voting Classifier: lr_C [0.1,1,10], lr_solver[saga], lr_maxiter[100, 200, 40
 6-	Refit: AUC
 
 * Evaluating the Models on the Validation set: all the trained models evaluated on the validation set. Accuracy, Precision, recall, F1 score, ROC AUC, and latency were calculated. Picked the best performance model based on ROC AUC score.  
-Random Forest on the set of capped features achieved the best results. You can view models performance on validation set Here: <center><iframe src="https://public.tableau.com/views/Performanceofthemodelsonthevalidationset/Dashboard1?:l..
-
+Random Forest on the set of capped features achieved the best results. You can view models performance on validation set Here: [ModelsPerformance](https://public.tableau.com/views/Performanceofthemodelsonthevalidationset/Dashboard1?:l..)
+	
 * Best Model: Random Forest 
 * Best set of Parameters: Bootstrap =False, n_estimators=500, max_depth= None
 * Data Imbalance treated using TomkeLinks
