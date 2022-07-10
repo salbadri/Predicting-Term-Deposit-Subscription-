@@ -64,7 +64,7 @@ This dataset consists of 45211 records and 17 variables.
 * I used Box-Cox Transformation. A Box Cox transformation is a transformation of non-normal dependent variables into a normal shape. Normality is an important assumption for many statistical techniques; if your data isn’t normal, applying a Box-Cox means that you are able to run a broader number of tests. I performed transformation on age, pdays, balance, duration, and campaign. 
 * I converted categorical features to numeric using Label Encoder. And standardized my training set. I preprocessed the test set in the same way as I did with the training set. 
 * Data set was already divided into train set and test set. I, then, partitioned the test set into test and validation. 
-* My dataset is imbalanced. I used TomekLinks(tl), Nearmiss and SMOTE separately. I will check which method will yield best results
+* My dataset is imbalanced. I Tried TomekLinks(tl), Nearmiss and SMOTE to balance my data. I found that TomekLinks was the best method.  
 * Based on the EDA, I defined seven set of features:
 1- Original features: original features (not capped or transformed).
 2- original reduced: drop feature that I suspect it degrades the performance of my model. dropped pdays and previous as they are correlated. 
