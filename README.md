@@ -32,7 +32,7 @@ This dataset consists of 45211 records and 17 variables.
 ## Issues with Dataset
 * Imbalanced as it depicted in the figure below
 
-![github-small](https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/Dist%20of%20the%20target%20variable%20.png)
+![github-small](https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/Data%20Imbalance%20Treatment/Original%20Dataset.png)
 
 * Has missing values: job, education, contact, and poutcome have unknown values. 
 
@@ -64,7 +64,10 @@ This dataset consists of 45211 records and 17 variables.
 * I used Box-Cox Transformation. A Box Cox transformation is a transformation of non-normal dependent variables into a normal shape. Normality is an important assumption for many statistical techniques; if your data isn’t normal, applying a Box-Cox means that you are able to run a broader number of tests. I performed transformation on age, pdays, balance, duration, and campaign. 
 * I converted categorical features to numeric using Label Encoder. And standardized my training set. I preprocessed the test set in the same way as I did with the training set. 
 * Data set was already divided into train set and test set. I, then, partitioned the test set into test and validation. 
-* My dataset is imbalanced. I Tried TomekLinks(tl), Nearmiss and SMOTE to balance my data. I found that TomekLinks was the best method.  
+* My dataset is imbalanced. I Tried TomekLinks(tl), Nearmiss and SMOTE to balance my data. I found that TomekLinks was the best method. 
+![github-small](https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/Data%20Imbalance%20Treatment/TomekLinks.png )
+![github-small](https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/Data%20Imbalance%20Treatment/NearMiss.png )
+![github-small](https://github.com/salbadri/banking-Dataset-Marketing-Targets/blob/main/Images/Data%20Imbalance%20Treatment/SMOTE.png )
 * Based on the EDA, I defined seven set of features:
 1- Original features: original features (not capped or transformed).
 2- original reduced: drop feature that I suspect it degrades the performance of my model. dropped pdays and previous as they are correlated. 
