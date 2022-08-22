@@ -1,4 +1,6 @@
-# Banking-Dataset-Marketing-Targets
+# Predicting Term Deposit Subscription 
+
+
 Personal project. 
 #### -- Project Status: [Completed]
 ## Project Intro/Objective
